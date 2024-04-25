@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<!-- Inkluderer jQuery bibliotek -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Kjoper</title>
+</head>
+<body>
+<h1>Bestilling av Kinobilleter</h1>
+
+<!-- Dropdown for å velge type film -->
+<div class="form-group">
+    <div id="type" class="dropdown"></div>
+    <span id="typeError" class="error-message"></span>
+
+    <!-- Feilmelding for valg av filmtypen -->
+</div>
+
+<!-- Skjema for å fylle inn kjøperens informasjon -->
+<table>
+    <tr>
+        <td>Fornavn:</td>
+        <td><input type="text" id="fornavn"/><span id="fornavnError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>Etternavn:</td>
+        <td><input type="text" id="etternavn"/><span id="etternavnError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>Antall:</td>
+        <td><input type="number" id="antall"/><span id="antallError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>Telefonnr:</td>
+        <td><input type="tel" id="telefonnr"/><span id="telefonnrError" class="error-message"></span></td>
+    </tr>
+    <tr>
+        <td>Epost:</td>
+        <td><input type="text" id="epost"/><span id="epostError" class="error-message"></span></td>
+    </tr>
+</table>
+
+<!-- Knapp for å kjøpe billetter -->
+<button onclick="regKjoper()">Kjøp billeter</button><br/>
+
+<!-- Overskrift for listen over alle kjøpere -->
+<h2>Alle billetene</h2>
+
+<!-- Div for å vise listen over alle kjøpere -->
+<div id="kjoperne"></div>
+
+<!-- Knapp for å slette all data -->
+<button onclick="slettKjoperne()">Slett data</button>
+
+<!-- Inkludering av JavaScript-fil -->
+<script src="index.js"></script>
+
+</body>
+</html>
